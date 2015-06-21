@@ -1,16 +1,16 @@
 # getting-cleaning-data
 
-### R script - used to transform raw data into clean dataset
-#### Step 1
-##### I load txt raw data with instruction read.table and later rbind the data
-#### Step 2
-##### I load the "features" dataset and then regex for means and std's only
-#### Step 3
+### R script *(run_analysis.R)* used to transform raw data into a clean dataset
+#### Step  no. 1
+##### I loaded multiple (txt) raw data files (with the read.table instruction), train and test datasets (which were separated) where *rbinded* (row-binded), finally I *cbinded* (column-binded) the data into one dataframe object called "dataset".
+#### Step no. 2
+##### I loaded the *features.txt* dataset and then regexed columns for *means* and *stds (standard deviations)* only. This vector (which was a result of two *greps*) was used to subset the main dataset by columns.
+#### Step no. 3
 ##### After loading the "activities labels" dataset, In the main dataset I substitute activities ids with their proper name
-#### Step 4
-##### I normalize the col names with help of regex
-#### Step 5
-##### I aggregate the dataset by subjectid and activity
+#### Step no. 4
+##### I normalize the column names with a help of regex. Non-alphabetic chars (e.g. dashes) were removed and all was changed to lowercase.
+#### Step no. 5
+##### I aggregate the dataset by subjectid and activity,
 ##### Data is finally exported into tidy_data.txt
 
 ### tidy_data.txt - holds the result tidy dataset
